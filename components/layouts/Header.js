@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom';
 const Header = (props) => {
   const {brand} = props; //Destructuring
   return(
@@ -9,7 +10,14 @@ const Header = (props) => {
       <a href="/" className="navbar-brand">{brand}</a>
         <ul className="navbar-nav mr">
            <li className="nav-item">
-             <a href="/" className="nav-link" >Home</a>
+             <Link to="/" className="nav-link" ><i className="fas fa-home"></i>Home</Link>
+           </li>
+
+           <li className="nav-item">
+             <Link to="/contact/add" className="nav-link" ><i className="fas fa-plus "></i>Add</Link>
+           </li>
+           <li className="nav-item">
+             <Link to="/contact/About" className="nav-link" ><i className="fas fa-question"></i>About</Link>
            </li>
         </ul>
       </div>
